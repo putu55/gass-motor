@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gass Motor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0faff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00bfff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      background-color: #005f9e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+    }
+    .layanan {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      flex: 1 1 250px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .galeri img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #004a80;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .wa-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="display: flex; align-items: center; gap: 20px; justify-content: center; background-color: #00bfff; color: white; padding: 20px;">
+    <img src="logo.png" alt="Logo Gass Motor" style="height: 200px;" />
+    <div>
+      <h1 style="margin: 0;">Gass Motor</h1>
+      <p style="margin: 0;">Bengkel servis mobil terpercaya dan cepat!</p>
+    </div>
+  </header>
+  
+  
+
+  <nav>
+    <a href="#layanan">Layanan</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#lokasi">Lokasi</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="layanan">
+    <h2>Layanan Kami</h2>
+    <div class="layanan">
+      <div class="card">
+        <img src="oli.jpg" alt="Ganti Oli Mobil">
+        <h3>Ganti Oli Mobil</h3>
+        <p>Gunakan oli berkualitas sesuai jenis mobilmu.</p>
+      </div>
+      <div class="card">
+        <img src="ac.jpg" alt="Cek AC Mobil">
+        <h3>Cek & Servis AC Mobil</h3>
+        <p>Cek freon, filter, dan sistem pendingin secara menyeluruh.</p>
+      </div>
+      <div class="card">
+        <img src="tuneup.jpg" alt="Tune Up Mobil">
+        <h3>Tune Up Mobil</h3>
+        <p>Pengecekan busi, filter udara, throttle body, dan lainnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Bengkel</h2>
+    <div class="galeri">
+      <img src="bengkel1.jpg" alt="Foto Bengkel">
+      <img src="bengkel2.jpg" alt="Foto Montir">
+    </div>
+  </section>
+
+<section id="lokasi">
+  <h2>Lokasi</h2>
+  <p>Jl.darmika no 22 Tanah Lot Tabanan Bali</p>
+  <div style="width: 100%; max-width: 600px;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d986.2433587005737!2d115.10711426959553!3d-8.598548673434182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzUnNTQuOCJTIDExNcKwMDYnMjcuOSJF!5e0!3m2!1sid!2sid!4v1746934059538!5m2!1sid!2sid" 
+      width="100%" 
+      height="300" 
+      style="border:0; border-radius: 10px;" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+  
+  
+
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Telepon: 628761705071</p>
+    <p>Telepon: 6285737074919</p>
+    <a class="wa-button" href="https://wa.me/628761705071" target="_blank">Booking via WhatsApp</a>
+    <a class="wa-button" href="https://wa.me/6285737074919" target="_blank">Booking via WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gass Motor. Semua Hak Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
