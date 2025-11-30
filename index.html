@@ -220,9 +220,176 @@
     <a class="wa-button" href="https://wa.me/085737074919" target="_blank">WhatsApp 2</a>
   </section>
 
+  <a href="https://wa.me/6287761705071" class="wa-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .galeri img, .galeri video {
+      width: 320px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #003760;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .wa-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* Floating WA */
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 12px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    .wa-float img {
+      width: 45px;
+      height: 45px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Gass Motor" />
+    <h1>Gass Motor</h1>
+    <p>Bengkel servis mobil terpercaya — cepat, rapih, dan profesional!</p>
+  </header>
+
+  <nav>
+    <a href="#layanan">Layanan</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#lokasi">Lokasi</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="layanan">
+    <h2>Layanan Kami</h2>
+    <div class="layanan">
+
+      <div class="card">
+        <img src="oli.jpg" alt="Ganti Oli Mobil">
+        <h3>Ganti Oli Mobil</h3>
+        <p>Oli berkualitas untuk performa maksimal kendaraan Anda.</p>
+      </div>
+
+      <div class="card">
+        <img src="ac.jpg" alt="Servis AC Mobil">
+        <h3>Servis AC Mobil</h3>
+        <p>Cek freon, filter, kebocoran, dan pendinginan menyeluruh.</p>
+      </div>
+
+      <div class="card">
+        <img src="tuneup.jpg" alt="Tune Up Mobil">
+        <h3>Tune Up Mobil</h3>
+        <p>Pembersihan throttle body, cek busi, dan setting performa.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Bengkel</h2>
+    <div class="galeri">
+      <img src="bengkel11.jpg" />
+      <img src="bengkel12.jpg" />
+      <img src="bengkel13.jpg" />
+      <img src="bengkel14.jpg" />
+      <img src="bengkel15.jpg" />
+      <img src="bengkel16.jpg" />
+      <img src="bengkel17.jpg" />
+
+      <video controls><source src="bengkel18.mp4" type="video/mp4"></video>
+      <video controls><source src="bengkel19.mp4" type="video/mp4"></video>
+      <video controls><source src="bengkel20.mp4" type="video/mp4"></video>
+
+      <img src="bengkel21.jpg" />
+      <img src="bengkel22.jpg" />
+      <img src="bengkel23.jpg" />
+      <img src="bengkel24.jpg" />
+      <img src="bengkel25.jpg" />
+      <img src="bengkel26.jpg" />
+      <img src="bengkel27.jpg" />
+    </div>
+  </section>
+
+  <section id="lokasi">
+    <h2>Lokasi Kami</h2>
+    <p>Jl. Darmika Beraban, Tanah Lot, Tabanan, Bali</p>
+    <div style="max-width: 650px; margin: auto;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.9713284434706!2d115.10514377579393!3d-8.598750987319024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2390050de7fd9%3A0x5184469b127b9661!2sGASS%20MOTOR!5e0!3m2!1sid!2sid!4v1747662921638!5m2!1sid!2sid" width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p><strong>Telp 1:</strong> 087761705071</p>
+    <p><strong>Telp 2:</strong> 085737074919</p>
+
+    <a class="wa-button" href="https://wa.me/087761705071" target="_blank">WhatsApp 1</a>
+    <a class="wa-button" href="https://wa.me/085737074919" target="_blank">WhatsApp 2</a>
+  </section>
+
   <a href="https://wa.me/... " class="wa-float">
    <img ... >
 </a>
+
 
 
 
