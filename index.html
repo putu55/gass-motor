@@ -6,127 +6,144 @@
   <title>Gass Motor</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0faff;
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #eef6ff;
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #00bfff;
+      background: linear-gradient(135deg, #007edc, #00bfff);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
     header img {
-      height: 60px;
+      height: 160px;
     }
+
     nav {
-      background-color: #005f9e;
-      color: white;
+      background-color: #004a80;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      gap: 30px;
+      padding: 12px 0;
+      font-weight: 600;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     }
+
     nav a {
       color: white;
       text-decoration: none;
+      transition: 0.3s;
     }
+
+    nav a:hover {
+      color: #00e1ff;
+      transform: scale(1.1);
+    }
+
     section {
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
+
+    h2 {
+      color: #004a80;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+
     .layanan {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
+
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 15px;
-      flex: 1 1 250px;
+      transition: 0.3s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
     .card img {
       width: 100%;
-      border-radius: 8px;
-    }
-    .galeri img {
-      width: 300px;
-      margin: 10px;
       border-radius: 10px;
     }
+
+    .galeri img, .galeri video {
+      width: 320px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
     footer {
-      background-color: #004a80;
+      background-color: #003760;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
+      margin-top: 40px;
     }
+
     .wa-button {
       display: inline-block;
       background-color: #25D366;
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: 600;
+      margin-right: 10px;
+      transition: 0.3s;
     }
 
-    /* WA Floating Button */
+    .wa-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* Floating WA */
     .wa-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
       background-color: #25D366;
       border-radius: 50%;
-      padding: 10px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      padding: 12px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      z-index: 999;
     }
 
     .wa-float img {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
+      animation: pulse 2s infinite;
     }
 
-    .wa-float:hover {
-      transform: scale(1.1);
-    } 
-     
     @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
-
-    .wa-float img {
-    animation: pulse 2s infinite;
-    }
-    .wa-float:hover::after {
-    content: "Chat Kami 📲";
-    position: absolute;
-    right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #25D366;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
   </style>
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; gap: 20px; justify-content: center; background-color: #00bfff; color: white; padding: 20px;">
-    <img src="logo.png" alt="Logo Gass Motor" style="height: 200px;" />
-    <div>
-      <h1 style="margin: 0;">Gass Motor</h1>
-      <p style="margin: 0;">Bengkel servis mobil terpercaya dan cepat!</p>
-    </div>
+  <header>
+    <img src="logo.png" alt="Logo Gass Motor" />
+    <h1>Gass Motor</h1>
+    <p>Bengkel servis mobil terpercaya — cepat, rapih, dan profesional!</p>
   </header>
 
   <nav>
@@ -139,91 +156,69 @@
   <section id="layanan">
     <h2>Layanan Kami</h2>
     <div class="layanan">
+
       <div class="card">
         <img src="oli.jpg" alt="Ganti Oli Mobil">
         <h3>Ganti Oli Mobil</h3>
-        <p>Gunakan oli berkualitas sesuai jenis mobilmu.</p>
+        <p>Oli berkualitas untuk performa maksimal kendaraan Anda.</p>
       </div>
+
       <div class="card">
-        <img src="ac.jpg" alt="Cek AC Mobil">
-        <h3>Cek & Servis AC Mobil</h3>
-        <p>Cek freon, filter, dan sistem pendingin secara menyeluruh.</p>
+        <img src="ac.jpg" alt="Servis AC Mobil">
+        <h3>Servis AC Mobil</h3>
+        <p>Cek freon, filter, kebocoran, dan pendinginan menyeluruh.</p>
       </div>
+
       <div class="card">
         <img src="tuneup.jpg" alt="Tune Up Mobil">
         <h3>Tune Up Mobil</h3>
-        <p>Pengecekan busi, filter udara, throttle body, dan lainnya.</p>
+        <p>Pembersihan throttle body, cek busi, dan setting performa.</p>
       </div>
+
     </div>
   </section>
 
   <section id="galeri">
     <h2>Galeri Bengkel</h2>
     <div class="galeri">
-  <img src="bengkel11.jpg" alt="Foto Bengkel" />
-  <img src="bengkel12.jpg" alt="Foto Bengkel" />
-  <img src="bengkel13.jpg" alt="Foto Bengkel" />
-  <img src="bengkel14.jpg" alt="Foto Bengkel" />
-  <img src="bengkel15.jpg" alt="video Bengkel" />
-  <img src="bengkel16.jpg" alt="video Bengkel" />
-  <img src="bengkel17.jpg" alt="video Bengkel" />
+      <img src="bengkel11.jpg" />
+      <img src="bengkel12.jpg" />
+      <img src="bengkel13.jpg" />
+      <img src="bengkel14.jpg" />
+      <img src="bengkel15.jpg" />
+      <img src="bengkel16.jpg" />
+      <img src="bengkel17.jpg" />
 
-  <video width="320" height="240" controls>
-    <source src="bengkel18.mp4" type="video/mp4">
-    Browser tidak mendukung video.
-  </video>
+      <video controls><source src="bengkel18.mp4" type="video/mp4"></video>
+      <video controls><source src="bengkel19.mp4" type="video/mp4"></video>
+      <video controls><source src="bengkel20.mp4" type="video/mp4"></video>
 
-  <video width="320" height="240" controls>
-    <source src="bengkel19.mp4" type="video/mp4">
-    Browser tidak mendukung video.
-  </video>
-
-  <video width="320" height="240" controls>
-    <source src="bengkel20.mp4" type="video/mp4">
-    Browser tidak mendukung video.
-  </video>
-
-  <img src="bengkel21.jpg" alt="Foto Bengkel" />
-  <img src="bengkel22.jpg" alt="Foto Bengkel" />
-  <img src="bengkel23.jpg" alt="Foto Bengkel" />
-  <img src="bengkel24.jpg" alt="Foto Bengkel" />
-  <img src="bengkel25.jpg" alt="video Bengkel" />
-  <img src="bengkel26.jpg" alt="video Bengkel" />
-  <img src="bengkel27.jpg" alt="video Bengkel" />
-</div>
-
+      <img src="bengkel21.jpg" />
+      <img src="bengkel22.jpg" />
+      <img src="bengkel23.jpg" />
+      <img src="bengkel24.jpg" />
+      <img src="bengkel25.jpg" />
+      <img src="bengkel26.jpg" />
+      <img src="bengkel27.jpg" />
+    </div>
   </section>
 
   <section id="lokasi">
-    <h2>Lokasi</h2>
-    <p>Jl.darmika Beraban Tanah Lot Tabanan Bali</p>
-    <div style="width: 100%; max-width: 600px;">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.9713284434706!2d115.10514377579393!3d-8.598750987319024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2390050de7fd9%3A0x5184469b127b9661!2sGASS%20MOTOR!5e0!3m2!1sid!2sid!4v1747662921638!5m2!1sid!2sid" 
-        style="border:0; border-radius: 10px;" allowfullscreen=""
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <h2>Lokasi Kami</h2>
+    <p>Jl. Darmika Beraban, Tanah Lot, Tabanan, Bali</p>
+    <div style="max-width: 650px; margin: auto;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.9713284434706!2d115.10514377579393!3d-8.598750987319024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2390050de7fd9%3A0x5184469b127b9661!2sGASS%20MOTOR!5e0!3m2!1sid!2sid!4v1747662921638!5m2!1sid!2sid" width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 
   <section id="kontak">
     <h2>Hubungi Kami</h2>
-    <p>Telepon: 087761705071</p>
-    <p>Telepon: 085737074919</p>
-    <a class="wa-button" href="https://wa.me/087761705071" target="_blank">Booking via WhatsApp</a>
-    <a class="wa-button" href="https://wa.me/085737074919" target="_blank">Booking via WhatsApp</a>
+    <p><strong>Telp 1:</strong> 087761705071</p>
+    <p><strong>Telp 2:</strong> 085737074919</p>
+
+    <a class="wa-button" href="https://wa.me/087761705071" target="_blank">WhatsApp 1</a>
+    <a class="wa-button" href="https://wa.me/085737074919" target="_blank">WhatsApp 2</a>
   </section>
 
-  <!-- Tombol WhatsApp Mengambang -->
   <a href="https://wa.me/6287761705071" class="wa-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="Chat via WhatsApp">
-  </a>
-
-
-  <footer>
-    <p>&copy; 2025 Gass Motor. Semua Hak Dilindungi.</p>
-  </footer>
-
-</body>
-</html>
-
+    <img src="https://cdn-icons-p
